@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Input } from './Input';
+import SelectedSongs from './SelectedSongs';
 
 
 class App extends Component {
@@ -11,6 +11,7 @@ class App extends Component {
         <p>this app is a form to search songs</p>
 
         <Input/>
+        <SelectedSongs/>
       </div>
 
     );
