@@ -6,18 +6,18 @@ import SelectedSongs from './SelectedSongs';
 export class Input extends Component {
 
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             matching_songs: [],
             selected_song: '',
         }
 
-        this.handleClick = this.handleClick.bind(this);
-        this.handleChange = this.handleChange.bind(this);
+        this.handleClick = this.handleClick.bind(this)
+        this.handleChange = this.handleChange.bind(this)
     }
 
     handleClick(event){
-        this.setState({ selected_song: event.target.innerHTML });
+        this.setState({ selected_song: event.target.innerHTML })
         SelectedSongs.setState({selected_song:event.target.innerHTML})
     }
 
@@ -25,7 +25,7 @@ export class Input extends Component {
         const song = event.target.value.trim();
         var array_songs = [];
 
-        if (song != ''){
+        if (song !== ''){
             for (var i = 0; i < allSongs.length; i++) {
                 if (allSongs[i].includes(song) === true) {
                     array_songs.push(allSongs[i])
