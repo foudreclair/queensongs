@@ -11,14 +11,14 @@ export class Input extends Component {
             matching_songs: [],
             selected_song: '',
         }
-
         this.handleClick = this.handleClick.bind(this)
         this.handleChange = this.handleChange.bind(this)
     }
 
     handleClick(event){
         this.setState({ selected_song: event.target.innerHTML })
-        SelectedSongs.setState({selected_song:event.target.innerHTML})
+        //SelectedSongs.setState({selected_song:event.target.innerHTML})
+        //console.log(SelectedSongs.state.selected_song);
     }
 
     handleChange(event) {
