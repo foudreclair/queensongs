@@ -16,9 +16,10 @@ export class Input extends Component {
     }
 
     handleClick(event){
+
         this.setState({ selected_song: event.target.innerHTML })
-        //SelectedSongs.setState({selected_song:event.target.innerHTML})
-        //console.log(SelectedSongs.state.selected_song);
+        this.props.callbacksong(event.target.innerHTML)
+    
     }
 
     handleChange(event) {
