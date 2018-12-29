@@ -122,7 +122,6 @@ const allSongs = [
     "Now I'm Here",
     "Ogre Battle",
     "One Vision",
-    "One Vision",
     "One Year of Love",
     "Pain Is So Close to Pleasure",
     "Party",
