@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './songs';
 import { allSongs } from './songs';
-import SelectedSongs from './SelectedSongs';
 
 export class Input extends Component {
 
@@ -38,8 +37,8 @@ export class Input extends Component {
 
     render() {
         return (
-            <div>
-                <form className="row">
+            <div className="col-md-6">
+                <form className="">
                     <input type="text" list="songs" value={this.song} onChange={this.handleChange} placeholder="search a song"></input>
                     <div>
                         <h4>Results :</h4>
