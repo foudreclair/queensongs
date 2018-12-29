@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './songs';
 import { allSongs } from './songs';
+import axios from 'axios';
 
 export class Input extends Component {
 
@@ -25,14 +26,22 @@ export class Input extends Component {
         const song = event.target.value.trim();
         var array_songs = [];
 
-        if (song !== ''){
-            for (var i = 0; i < allSongs.length; i++) {
-                if (allSongs[i].includes(song) === true) {
-                    array_songs.push(allSongs[i])
-                }
-            }
+        const API = 'http://localhost:8081/'
+        const SEARCH_SONG = song
+        
+        if(song !== ''){
+            axios.get(API + SEARCH_SONG)
+            .then(res => {
+              array_songs = res.data
+              this.setState({ matching_songs: array_songs });
+            }).catch(err =>{
+              console.log(err)
+            })
         }
-        this.setState({ matching_songs: array_songs });
+        else{
+            this.setState({matching_songs:[]})
+        }
+        
     }
 
     render() {

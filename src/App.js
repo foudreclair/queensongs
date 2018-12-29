@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Input } from './Input';
-import Api from './api';
 import SelectedSongs from './SelectedSongs';
 
 class App extends Component {
@@ -34,7 +33,7 @@ class App extends Component {
           onRef={ref => (this.child = ref)}
           selected_song={this.state.selected_song}
         />
-        <Api/>
+
         </div>
       </div>
 
